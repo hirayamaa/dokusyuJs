@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // ブラケット記法を用いたオブジェクトの値取得方法
+            let person = {
+                name: {first: "太郎", last: "独習"},
+                age: 18,
+            };
+            console.log(person["age"]);
+            console.log(person["name"]["last"]);
+            const keyBase = "member";
+            let members = {
+                [keyBase + "1"]: "太郎",
+                [keyBase + "2"]: "二郎",
+            };
+            console.log(members);
+        </script>
+    </body>
+</html>

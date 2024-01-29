@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let person = {
+                hello: function(){ console.log("こんにちは");}
+            };
+            person.hello();
+            person.bye = function(){console.log("さようなら");}
+            person.bye();
+            // メソッドは上書き可能
+            person.hello = function() {console.log("Hello");}
+            person.hello();
+        </script>
+    </body>
+</html>
