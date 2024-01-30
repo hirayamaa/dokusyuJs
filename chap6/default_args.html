@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // デフォルト引数
+            function plus(a, b = 5) {
+                return a + b;
+            }
+            console.log(plus(1, 4));
+            console.log(plus(10));
+            // デフォルト引数はundefinedが渡されたとき設定される
+            function hello(greeting = "こんにちは", person = "独習太郎") {
+                console.log(greeting + person);
+            }
+            // デフォルト引数が出力される
+            hello(undefined, undefined);
+            // nullは0のため 0+0で0が出力される
+            hello(null, null);
+            // 引数を省略するとundefinedが渡されるためデフォルト引数が出力される
+            hello();
+            // 6.5
+            function calcAreaOfCircle(radius, pi = 3) {
+                return radius * radius * pi;
+            }
+            console.log(calcAreaOfCircle(10, 3.14));
+            console.log(calcAreaOfCircle(2))
+        </script>
+    </body>
+</html>

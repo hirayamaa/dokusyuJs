@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // 配列のlengthプロパティが列挙対象でないことの確認
+            const arry = ["りんご", "バナナ"];
+            const propDesc = Reflect.getOwnPropertyDescriptor(arry, "length");
+            console.log(propDesc);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // 配列の出力
+            const fruits = ["りんご", "バナナ", "オレンジ"];
+            for (const value of fruits) {
+                console.log(value);
+            }
+            // Mapの出力
+            const map = new Map;
+            map.set('apple', 'りんご');
+            map.set('banana', 'バナナ');
+            for (const row of map) {
+                // 0番目にキー、1番目に値が格納されている
+                console.log(row[0], row[1]);
+            }
+            // 分割代入を用いたパターン
+            for (const [key, value] of map) {
+                console.log(key, value);
+            }
+            const arry = [10, "文字列", 20, true, 23, 47];
+            let sum = 0;
+            for (const value of arry) {
+                if (typeof value === "number") {
+                    sum += value;
+                }
+            }
+            console.log(sum);
+        </script>
+    </body>
+</html>

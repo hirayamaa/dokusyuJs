@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // プロパティの配列を取得
+            const fruits = {apple: "リンゴ", banana: "バナナ"};
+            const props = Object.keys(fruits);
+            console.log(props);
+            // 値の配列を取得
+            const values = Object.values(fruits);
+            console.log(values);
+            // プロパティと値のペアを配列で取得
+            const entries = Object.entries(fruits);
+            console.log(entries);
+            // 分割代入を用いた取得方法
+            for (const [key, value] of Object.entries(fruits)) {
+                console.log(key, value);
+            }
+            // 5.12
+            const obj = {
+                prop1: 10,
+                prop2: "文字列",
+                prop3: 20,
+                skip: 20,
+                prop4: true,
+                prop5: 23,
+                prop6: 47,
+            };
+            let sum = 0;
+            for (const [key, value] of Object.entries(obj)) {
+                if (key !== "skip" && typeof value === "number") {
+                    sum += value;
+                }
+            }
+            console.log(sum);
+        </script>
+    </body>
+</html>

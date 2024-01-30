@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function fn(obj) {
+                obj.arg1 ??= "初期値1";
+                obj.arg2 ??= "初期値2";
+                console.log(obj.arg1, obj.arg2);
+            }
+            const param = {arg2: "引数2"};
+            fn(param);
+
+            // 6.6
+            const obj1 = {num: 3};
+            const obj2 = {num: 3};
+            let num = 3;
+            function fn2(obj1Arg, obj2Arg, numberArg) {
+                obj1Arg = {num: 5};
+                obj2Arg.num = 5;
+                numberArg = 5;
+            }
+            fn2(obj1, obj2, num);
+            console.log(obj1.num, obj2.num, num);
+        </script>
+    </body>
+</html>
