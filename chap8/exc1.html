@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            window.name = "独習太郎";
+            const which = () => {
+                console.log(this.name);
+            };
+            const hanako = {
+                name: "独習花子",
+                callName() {
+                    which();
+                }
+            }
+            // 独習太郎が出力される
+            hanako.callName();
+        </script>
+    </body>
+</html>

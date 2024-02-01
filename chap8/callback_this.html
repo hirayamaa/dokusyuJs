@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            window.name = "花子";
+            const taro = {
+                name: "太郎",
+                hello: function() {
+                    console.log("こんにちは、" + this.name);
+                }
+            }
+            function greeting(callback) {
+                callback();
+            }
+            // 花子が出力される
+            greeting(taro.hello);
+            
+            // メソッドを変数に代入した場合も同様にwindowオブジェクトのnameを参照する
+            const helloWho = taro.hello;
+            helloWho();
+        </script>
+    </body>
+</html>

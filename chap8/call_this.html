@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            window.name = "花子";
+            const taro = {name: "太郎"};
+            function hello(greeting) {
+                console.log(`${greeting}、${this.name}`);
+            }
+            hello.call(taro, "こんにちは");
+        </script>
+    </body>
+</html>

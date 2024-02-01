@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            window.name = "花子";
+            function hello(greeting, name) {
+                console.log(`${greeting}、${name}`);
+            }
+            hello.apply(null, ["こんにちは", "太郎"]);
+        </script>
+    </body>
+</html>

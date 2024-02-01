@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // 
+            function delayMessageFactory(fn, ms) {
+                return function(message) {
+                    setTimeout(fn, ms, message);
+                }
+            }
+            const dialog = delayMessageFactory(alert, 2000);
+            dialog("こんにちは");
+            const log = delayMessageFactory(console.log, 3000);
+            log("こんばんは");
+
+            // アロー関数化
+            function delayMessageFactoryWithArrow(fn, ms) {
+                return message => setTimeout(fn, ms, message);
+            }
+            const dialog2 = delayMessageFactoryWithArrow(alert, 2000);
+            dialog2("こんにちは(アロー関数)");
+            const log2 = delayMessageFactoryWithArrow(console.log, 3000);
+            log2("こんばんは（アロー関数）");
+        </script>
+    </body>
+</html>
