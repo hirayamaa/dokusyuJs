@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            class Counter {
+                // プライベートプロパティ
+                #count = 0;
+                // プライベートメソッド
+                #print() {
+                    console.log(this.#count);
+                }
+                increment() {
+                    this.#count++;
+                    this.#print();
+                }
+            }
+            const counter = new Counter;
+            counter.increment();
+            // Syntaxエラー
+            //counter.#print();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let instance = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    // 秒数を取得
+                    const second = new Date().getSeconds();
+                    if (second % 2 === 0) {
+                        resolve(second);
+                    } else {
+                        reject(second);
+                    }
+                }, 1000);
+            });
+            
+            instance
+            .then(second => {console.log(`${second}は偶数のため成功とします。`)})
+            .catch(second => {console.log(`${second}は奇数のため、エラーとします。`)})
+            .finally(() => {console.log("処理を終了します。")})
+        </script>
+    </body>
+</html>

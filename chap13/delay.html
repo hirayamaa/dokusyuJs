@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function delay(fn, message, ms) {
+                setTimeout(function() {
+                    fn(message);
+                }, ms);
+            }
+            delay(console.log, "こんにちは", 1000);
+            delay(alert, "さようなら", 2000);
+        </script>
+    </body>
+</html>
